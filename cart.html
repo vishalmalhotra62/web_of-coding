@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sora&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="apple-touch-icon" sizes="57x57" href="media/favicons/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="media/favicons/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="media/favicons/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="media/favicons/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="media/favicons/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="media/favicons/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="media/favicons/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="media/favicons/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-icon-180x180.png" />
+  <!-- <link rel="icon" type="image/png" sizes="192x192" href="media/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="media/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicons/favicon-16x16.png" /> -->
+  <link rel="shortcut icon" href="media/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="media/favicons/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="media/favicons/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Cart</title>
+</head>
+
+<body>
+  <div class="page-wrapper container-fluid p-0 dash">
+    <div class="d-nav container-fluid m-0 d-flex justify-content-center position-fixed w-100" style="
+          background-color: #f4f4f4;
+
+          background-position: center center;
+          height: 110px;
+          z-index: 999;
+        ">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid justify-content-between">
+          <div class="logo_box">
+            <a href="/" class="navbar-brand logo">
+              <img src="media/logo/logo.png" alt="web of coding">
+            </a>
+          </div>
+          <div class="" id="navbarNav">
+            <div class="d-flex justify-content-between gap-5">
+              <ul class="navbar-nav align-items-center gap-4">
+                <li class="nav-item">
+                  <a class="nav-link clr fs20 active" aria-current="page" href="Dashbaord.html">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link clr fs20" aria-current="page" href="shop.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link clr fs20" aria-current="page" href="why_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link clr fs20" aria-current="page" href="contact_us.html">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="navbar-nav align-items-center justify-content-center gap-3 mx-4">
+            <li class="nav-item">
+              <a class="nav-link clr fs14" aria-current="page" href="#">
+                <div class="cart-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.9544 17.5656C14.2196 17.5656 14.474 17.4602 14.6615 17.2727C14.849 17.0851 14.9544 16.8308 14.9544 16.5656V14.5656C14.9544 14.3004 14.849 14.046 14.6615 13.8585C14.474 13.6709 14.2196 13.5656 13.9544 13.5656C13.6892 13.5656 13.4348 13.6709 13.2473 13.8585C13.0597 14.046 12.9544 14.3004 12.9544 14.5656V16.5656C12.9544 16.8308 13.0597 17.0851 13.2473 17.2727C13.4348 17.4602 13.6892 17.5656 13.9544 17.5656ZM9.95438 17.5656C10.2196 17.5656 10.474 17.4602 10.6615 17.2727C10.849 17.0851 10.9544 16.8308 10.9544 16.5656V14.5656C10.9544 14.3004 10.849 14.046 10.6615 13.8585C10.474 13.6709 10.2196 13.5656 9.95438 13.5656C9.68917 13.5656 9.43481 13.6709 9.24728 13.8585C9.05974 14.046 8.95438 14.3004 8.95438 14.5656V16.5656C8.95438 16.8308 9.05974 17.0851 9.24728 17.2727C9.43481 17.4602 9.68917 17.5656 9.95438 17.5656ZM18.9544 5.56558H17.5744L15.8444 2.11558C15.7915 1.98863 15.713 1.87395 15.6139 1.77871C15.5147 1.68346 15.3969 1.6097 15.2679 1.56202C15.1389 1.51435 15.0015 1.49379 14.8642 1.50163C14.7269 1.50947 14.5927 1.54554 14.47 1.60759C14.3473 1.66964 14.2387 1.75633 14.151 1.86225C14.0633 1.96817 13.9984 2.09103 13.9603 2.22317C13.9222 2.35531 13.9118 2.49388 13.9297 2.63023C13.9476 2.76657 13.9935 2.89775 14.0644 3.01558L15.3344 5.56558H8.57438L9.84438 3.01558C9.94145 2.78249 9.94674 2.5213 9.8592 2.28447C9.77167 2.04763 9.59777 1.85268 9.37244 1.73874C9.14711 1.62481 8.88703 1.60034 8.6444 1.67024C8.40177 1.74014 8.19456 1.89923 8.06438 2.11558L6.33438 5.56558H4.95438C4.24757 5.57633 3.56726 5.83633 3.03343 6.29971C2.4996 6.7631 2.14656 7.4001 2.03655 8.09839C1.92655 8.79667 2.06666 9.51136 2.43217 10.1164C2.79768 10.7215 3.36511 11.178 4.03438 11.4056L4.77438 18.8656C4.849 19.6081 5.19773 20.2962 5.75245 20.7955C6.30718 21.2948 7.02808 21.5693 7.77438 21.5656H16.1544C16.9007 21.5693 17.6216 21.2948 18.1763 20.7955C18.731 20.2962 19.0798 19.6081 19.1544 18.8656L19.8944 11.4056C20.5651 11.1774 21.1334 10.7191 21.4987 10.1121C21.8639 9.50498 22.0025 8.78821 21.89 8.08872C21.7774 7.38923 21.4208 6.75217 20.8835 6.29035C20.3463 5.82854 19.6628 5.57179 18.9544 5.56558ZM17.1444 18.6656C17.1195 18.9131 17.0033 19.1425 16.8184 19.3089C16.6334 19.4753 16.3932 19.5668 16.1444 19.5656H7.76438C7.51562 19.5668 7.27532 19.4753 7.09041 19.3089C6.9055 19.1425 6.78926 18.9131 6.76438 18.6656L6.05438 11.5656H17.8544L17.1444 18.6656ZM18.9544 9.56558H4.95438C4.68917 9.56558 4.43481 9.46022 4.24728 9.27269C4.05974 9.08515 3.95438 8.8308 3.95438 8.56558C3.95438 8.30036 4.05974 8.04601 4.24728 7.85847C4.43481 7.67094 4.68917 7.56558 4.95438 7.56558H18.9544C19.2196 7.56558 19.474 7.67094 19.6615 7.85847C19.849 8.04601 19.9544 8.30036 19.9544 8.56558C19.9544 8.8308 19.849 9.08515 19.6615 9.27269C19.474 9.46022 19.2196 9.56558 18.9544 9.56558Z"
+                      fill="#3C3C3C"></path>
+                  </svg>
+
+                  <span class="cart-count">3</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="signin.html">
+                <button class="primary_btn btn p-0 primary_btn_bgclr text-center primary_btn_txtclr">
+                  Register/Login
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="m-nav container-fluid m-0 d-flex justify-content-center position-fixed w-100 p-0" style="
+          background: white;
+          background-size: cover;
+          background-position: center center;
+          height: 75px;
+          z-index: 999;
+        ">
+      <nav class="navbar navbar-lg">
+        <div class="w-100 p-0" style="height: 75px">
+          <div class="d-flex justify-content-between w-100 mt-2 align-items-center">
+            <div class="logo_box">
+              <a href="/" class="navbar-brand logo">
+                <img src="media/logo/logo.png" alt="webofcoding">
+              </a>
+            </div>
+            <button style="box-shadow: none" class="navbar-toggler d-flex align-items-center justify-content-center"
+              type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <div class="rounded-circle" style="
+                    position: relative;
+                    width: 32px;
+                    height: 32px;
+                    box-shadow: none;
+                    background: linear-gradient(
+                      270deg,
+                      #ed7c58 0%,
+                      #ffc266 98.19%
+                    );
+                    opacity: 0.1;
+                  "></div>
+              <svg style="
+                    position: absolute;
+                    z-index: 99;
+                    width: 20px;
+                    height: 20px;
+                  " viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1615_68280)">
+                  <path
+                    d="M3 3.77734H17V5.3329H3V3.77734ZM7.66667 9.22179H17V10.7773H7.66667V9.22179ZM3 14.6662H17V16.2218H3V14.6662Z"
+                    fill="url(#paint0_linear_1615_68280)"></path>
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_1615_68280" x1="17" y1="16.2218" x2="3.25278" y2="16.2218"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ED7C58"></stop>
+                    <stop offset="1" stop-color="#FFC266"></stop>
+                  </linearGradient>
+                  <clipPath id="clip0_1615_68280">
+                    <rect width="18.6667" height="18.6667" fill="white" transform="translate(0.666016 0.666016)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+
+          <div class="w-100 collapse navnav text-white" id="navbarNav" style="
+              background:url(media/backgrounds/navbg.png) no-repeat;
+                background-size: cover;
+                background-position: center center;
+              ">
+            <div class="w-100 p-4">
+              <ul class="navbar-nav align-items-center gap-4">
+                <li class="nav-item">
+                  <a class="text-white nav-link fs32 active" aria-current="page" href="Dashbaord.html">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link fs32" aria-current="page" href="shop.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link fs32" aria-current="page" href="why_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link fs32" aria-current="page" href="contact_us.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link active" aria-current="page" href="orders.html">
+                    <button class="primary_btn btn p-0 primary_btn_bgclr text-center primary_btn_txtclr">
+                      Shoping cart
+                    </button>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link active" aria-current="page" href="signin.html">
+                    <button class="primary_btn btn p-0 primary_btn_bgclr text-center primary_btn_txtclr">
+                      Register/Login
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="login container-fluid px-5 py-5 text-center d-flex justify-content-center align-items-center"
+      style="background-image: url(media/backgrounds/Header.png)">
+      <div class="container head-box top-0">
+        <h2 class="text-capitalize text-center fs60">Your Cart</h2>
+      </div>
+    </header>
+
+    <section class="content px-lg-4 ">
+      <div class="bg-white section_dashboard container-fluid">
+        <div class="row justify-content-between">
+          <div class="b1 col-lg-7 col-12 bg-white d-flex justify-content-center">
+            <div class="container mx-auto">
+              <div class="d-flex p-lg-3 py-3 flex-lg-nowrap flex-wrap justify-content-between align-items-baseline">
+                <div class="p-lg-2 col-lg-3 col-8 d-flex  flex-column gap-4">
+                  <span class="fw-bold fs16">Order</span>
+                  <span class="fs14 text-clr">Vivamus sagittis lacus...</span>
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">Type</span>
+                  <span class="fs12">E-Book</span>
+
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">QTY</span>
+                  <span class="fs12 text-lg-start text-end">02</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16"> Billing Type</span>
+                  <span class="fs12">one off</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column  gap-4 text-end">
+                  <span class="fw-bold fs16 w-100 text-end">Total</span>
+                  <span class="fs16 fw-bold d-flex flex-column gap-2">£125.00
+
+
+                    <span class="d-flex gap-3">
+                      <span class="d-flex gap-2 text-danger fs16"><svg width="15" height="17" viewBox="0 0 15 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.4583 3.49935H10.2917V2.66602C10.2917 2.00297 10.0414 1.36709 9.59605 0.898249C9.15065 0.429408 8.54656 0.166016 7.91667 0.166016H6.33333C5.70344 0.166016 5.09935 0.429408 4.65395 0.898249C4.20856 1.36709 3.95833 2.00297 3.95833 2.66602V3.49935H0.791667C0.581704 3.49935 0.38034 3.58715 0.231874 3.74343C0.0834075 3.89971 0 4.11167 0 4.33268C0 4.5537 0.0834075 4.76566 0.231874 4.92194C0.38034 5.07822 0.581704 5.16602 0.791667 5.16602H1.58333V14.3327C1.58333 14.9957 1.83356 15.6316 2.27895 16.1004C2.72435 16.5693 3.32844 16.8327 3.95833 16.8327H10.2917C10.9216 16.8327 11.5256 16.5693 11.971 16.1004C12.4164 15.6316 12.6667 14.9957 12.6667 14.3327V5.16602H13.4583C13.6683 5.16602 13.8697 5.07822 14.0181 4.92194C14.1666 4.76566 14.25 4.5537 14.25 4.33268C14.25 4.11167 14.1666 3.89971 14.0181 3.74343C13.8697 3.58715 13.6683 3.49935 13.4583 3.49935ZM5.54167 2.66602C5.54167 2.445 5.62507 2.23304 5.77354 2.07676C5.92201 1.92048 6.12337 1.83268 6.33333 1.83268H7.91667C8.12663 1.83268 8.32799 1.92048 8.47646 2.07676C8.62493 2.23304 8.70833 2.445 8.70833 2.66602V3.49935H5.54167V2.66602ZM11.0833 14.3327C11.0833 14.5537 10.9999 14.7657 10.8515 14.9219C10.703 15.0782 10.5016 15.166 10.2917 15.166H3.95833C3.74837 15.166 3.54701 15.0782 3.39854 14.9219C3.25007 14.7657 3.16667 14.5537 3.16667 14.3327V5.16602H11.0833V14.3327Z"
+                            fill="#C81414"></path>
+                        </svg>
+                        Remove</span>
+                      <span class="d-flex gap-2 text-success fs16"> <svg width="17" height="17" viewBox="0 0 17 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.20801 13.2494H6.56467C6.66886 13.25 6.77215 13.23 6.8686 13.1906C6.96505 13.1512 7.05278 13.0932 7.12676 13.0198L12.6051 7.53355L14.8534 5.33272C14.9276 5.25912 14.9865 5.17156 15.0267 5.07509C15.0669 4.97862 15.0876 4.87514 15.0876 4.77063C15.0876 4.66612 15.0669 4.56265 15.0267 4.46618C14.9865 4.3697 14.9276 4.28214 14.8534 4.20855L11.4968 0.812299C11.4232 0.738097 11.3356 0.679202 11.2391 0.63901C11.1427 0.598818 11.0392 0.578125 10.9347 0.578125C10.8302 0.578125 10.7267 0.598818 10.6302 0.63901C10.5337 0.679202 10.4462 0.738097 10.3726 0.812299L8.14009 3.05272L2.64592 8.53897C2.57255 8.61294 2.5145 8.70067 2.47511 8.79712C2.43571 8.89358 2.41574 8.99686 2.41634 9.10105V12.4577C2.41634 12.6677 2.49975 12.869 2.64822 13.0175C2.79668 13.166 2.99804 13.2494 3.20801 13.2494ZM10.9347 2.49063L13.1751 4.73105L12.0509 5.85522L9.81051 3.6148L10.9347 2.49063ZM3.99967 9.42563L8.69426 4.73105L10.9347 6.97147L6.24009 11.666H3.99967V9.42563ZM15.8747 14.8327H1.62467C1.41471 14.8327 1.21335 14.9161 1.06488 15.0646C0.916415 15.2131 0.833008 15.4144 0.833008 15.6244C0.833008 15.8343 0.916415 16.0357 1.06488 16.1842C1.21335 16.3326 1.41471 16.416 1.62467 16.416H15.8747C16.0846 16.416 16.286 16.3326 16.4345 16.1842C16.5829 16.0357 16.6663 15.8343 16.6663 15.6244C16.6663 15.4144 16.5829 15.2131 16.4345 15.0646C16.286 14.9161 16.0846 14.8327 15.8747 14.8327Z"
+                            fill="#007800"></path>
+                        </svg>
+                        Edit</span>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+              <div class="w-100" style="border-bottom: 3px solid #FF7081; opacity: 0.1;"></div>
+
+              <div class="d-flex p-lg-3 py-3 flex-lg-nowrap flex-wrap justify-content-between">
+                <div class="p-lg-2 col-lg-3 col-8 d-flex  flex-column gap-4">
+                  <span class="fw-bold fs16">Order</span>
+                  <span class="fs14 text-clr">Vivamus sagittis lacus...</span>
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">Type</span>
+                  <span class="fs12">E-Book</span>
+
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">QTY</span>
+                  <span class="fs12 text-lg-start text-end">02</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16"> Billing Type</span>
+                  <span class="fs12">one off</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4 text-end">
+                  <span class="fw-bold fs16 w-100 text-end">Total</span>
+                  <span class="fs16 fw-bold d-flex flex-column gap-2">£125.00
+
+
+                    <span class="d-flex gap-3">
+                      <span class="d-flex gap-2 text-danger fs16"><svg width="15" height="17" viewBox="0 0 15 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.4583 3.49935H10.2917V2.66602C10.2917 2.00297 10.0414 1.36709 9.59605 0.898249C9.15065 0.429408 8.54656 0.166016 7.91667 0.166016H6.33333C5.70344 0.166016 5.09935 0.429408 4.65395 0.898249C4.20856 1.36709 3.95833 2.00297 3.95833 2.66602V3.49935H0.791667C0.581704 3.49935 0.38034 3.58715 0.231874 3.74343C0.0834075 3.89971 0 4.11167 0 4.33268C0 4.5537 0.0834075 4.76566 0.231874 4.92194C0.38034 5.07822 0.581704 5.16602 0.791667 5.16602H1.58333V14.3327C1.58333 14.9957 1.83356 15.6316 2.27895 16.1004C2.72435 16.5693 3.32844 16.8327 3.95833 16.8327H10.2917C10.9216 16.8327 11.5256 16.5693 11.971 16.1004C12.4164 15.6316 12.6667 14.9957 12.6667 14.3327V5.16602H13.4583C13.6683 5.16602 13.8697 5.07822 14.0181 4.92194C14.1666 4.76566 14.25 4.5537 14.25 4.33268C14.25 4.11167 14.1666 3.89971 14.0181 3.74343C13.8697 3.58715 13.6683 3.49935 13.4583 3.49935ZM5.54167 2.66602C5.54167 2.445 5.62507 2.23304 5.77354 2.07676C5.92201 1.92048 6.12337 1.83268 6.33333 1.83268H7.91667C8.12663 1.83268 8.32799 1.92048 8.47646 2.07676C8.62493 2.23304 8.70833 2.445 8.70833 2.66602V3.49935H5.54167V2.66602ZM11.0833 14.3327C11.0833 14.5537 10.9999 14.7657 10.8515 14.9219C10.703 15.0782 10.5016 15.166 10.2917 15.166H3.95833C3.74837 15.166 3.54701 15.0782 3.39854 14.9219C3.25007 14.7657 3.16667 14.5537 3.16667 14.3327V5.16602H11.0833V14.3327Z"
+                            fill="#C81414"></path>
+                        </svg>
+                        Remove</span>
+                      <span class="d-flex gap-2 text-success fs16"> <svg width="17" height="17" viewBox="0 0 17 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.20801 13.2494H6.56467C6.66886 13.25 6.77215 13.23 6.8686 13.1906C6.96505 13.1512 7.05278 13.0932 7.12676 13.0198L12.6051 7.53355L14.8534 5.33272C14.9276 5.25912 14.9865 5.17156 15.0267 5.07509C15.0669 4.97862 15.0876 4.87514 15.0876 4.77063C15.0876 4.66612 15.0669 4.56265 15.0267 4.46618C14.9865 4.3697 14.9276 4.28214 14.8534 4.20855L11.4968 0.812299C11.4232 0.738097 11.3356 0.679202 11.2391 0.63901C11.1427 0.598818 11.0392 0.578125 10.9347 0.578125C10.8302 0.578125 10.7267 0.598818 10.6302 0.63901C10.5337 0.679202 10.4462 0.738097 10.3726 0.812299L8.14009 3.05272L2.64592 8.53897C2.57255 8.61294 2.5145 8.70067 2.47511 8.79712C2.43571 8.89358 2.41574 8.99686 2.41634 9.10105V12.4577C2.41634 12.6677 2.49975 12.869 2.64822 13.0175C2.79668 13.166 2.99804 13.2494 3.20801 13.2494ZM10.9347 2.49063L13.1751 4.73105L12.0509 5.85522L9.81051 3.6148L10.9347 2.49063ZM3.99967 9.42563L8.69426 4.73105L10.9347 6.97147L6.24009 11.666H3.99967V9.42563ZM15.8747 14.8327H1.62467C1.41471 14.8327 1.21335 14.9161 1.06488 15.0646C0.916415 15.2131 0.833008 15.4144 0.833008 15.6244C0.833008 15.8343 0.916415 16.0357 1.06488 16.1842C1.21335 16.3326 1.41471 16.416 1.62467 16.416H15.8747C16.0846 16.416 16.286 16.3326 16.4345 16.1842C16.5829 16.0357 16.6663 15.8343 16.6663 15.6244C16.6663 15.4144 16.5829 15.2131 16.4345 15.0646C16.286 14.9161 16.0846 14.8327 15.8747 14.8327Z"
+                            fill="#007800"></path>
+                        </svg>
+                        Edit</span>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+              <div class="w-100" style="border-bottom: 3px solid #FF7081; opacity: 0.1;"></div>
+
+              <!-- <img class="w-100" src="media/backgrounds/line2.png"> -->
+              <div class="d-flex p-lg-3 py-3 flex-lg-nowrap flex-wrap justify-content-between">
+                <div class="p-lg-2 col-lg-3 col-8 d-flex  flex-column gap-4">
+                  <span class="fw-bold fs16">Order</span>
+                  <span class="fs14 text-clr">Vivamus sagittis lacus...</span>
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">Type</span>
+                  <span class="fs12">E-Book</span>
+
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">QTY</span>
+                  <span class="fs12 text-lg-start text-end">02</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16"> Billing Type</span>
+                  <span class="fs12">one off</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4 text-end">
+                  <span class="fw-bold fs16 w-100 text-end">Total</span>
+                  <span class="fs16 fw-bold d-flex flex-column gap-2">£125.00
+
+
+                    <span class="d-flex gap-3">
+                      <span class="d-flex gap-2 text-danger fs16"><svg width="15" height="17" viewBox="0 0 15 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.4583 3.49935H10.2917V2.66602C10.2917 2.00297 10.0414 1.36709 9.59605 0.898249C9.15065 0.429408 8.54656 0.166016 7.91667 0.166016H6.33333C5.70344 0.166016 5.09935 0.429408 4.65395 0.898249C4.20856 1.36709 3.95833 2.00297 3.95833 2.66602V3.49935H0.791667C0.581704 3.49935 0.38034 3.58715 0.231874 3.74343C0.0834075 3.89971 0 4.11167 0 4.33268C0 4.5537 0.0834075 4.76566 0.231874 4.92194C0.38034 5.07822 0.581704 5.16602 0.791667 5.16602H1.58333V14.3327C1.58333 14.9957 1.83356 15.6316 2.27895 16.1004C2.72435 16.5693 3.32844 16.8327 3.95833 16.8327H10.2917C10.9216 16.8327 11.5256 16.5693 11.971 16.1004C12.4164 15.6316 12.6667 14.9957 12.6667 14.3327V5.16602H13.4583C13.6683 5.16602 13.8697 5.07822 14.0181 4.92194C14.1666 4.76566 14.25 4.5537 14.25 4.33268C14.25 4.11167 14.1666 3.89971 14.0181 3.74343C13.8697 3.58715 13.6683 3.49935 13.4583 3.49935ZM5.54167 2.66602C5.54167 2.445 5.62507 2.23304 5.77354 2.07676C5.92201 1.92048 6.12337 1.83268 6.33333 1.83268H7.91667C8.12663 1.83268 8.32799 1.92048 8.47646 2.07676C8.62493 2.23304 8.70833 2.445 8.70833 2.66602V3.49935H5.54167V2.66602ZM11.0833 14.3327C11.0833 14.5537 10.9999 14.7657 10.8515 14.9219C10.703 15.0782 10.5016 15.166 10.2917 15.166H3.95833C3.74837 15.166 3.54701 15.0782 3.39854 14.9219C3.25007 14.7657 3.16667 14.5537 3.16667 14.3327V5.16602H11.0833V14.3327Z"
+                            fill="#C81414"></path>
+                        </svg>
+                        Remove</span>
+                      <span class="d-flex gap-2 text-success fs16"> <svg width="17" height="17" viewBox="0 0 17 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.20801 13.2494H6.56467C6.66886 13.25 6.77215 13.23 6.8686 13.1906C6.96505 13.1512 7.05278 13.0932 7.12676 13.0198L12.6051 7.53355L14.8534 5.33272C14.9276 5.25912 14.9865 5.17156 15.0267 5.07509C15.0669 4.97862 15.0876 4.87514 15.0876 4.77063C15.0876 4.66612 15.0669 4.56265 15.0267 4.46618C14.9865 4.3697 14.9276 4.28214 14.8534 4.20855L11.4968 0.812299C11.4232 0.738097 11.3356 0.679202 11.2391 0.63901C11.1427 0.598818 11.0392 0.578125 10.9347 0.578125C10.8302 0.578125 10.7267 0.598818 10.6302 0.63901C10.5337 0.679202 10.4462 0.738097 10.3726 0.812299L8.14009 3.05272L2.64592 8.53897C2.57255 8.61294 2.5145 8.70067 2.47511 8.79712C2.43571 8.89358 2.41574 8.99686 2.41634 9.10105V12.4577C2.41634 12.6677 2.49975 12.869 2.64822 13.0175C2.79668 13.166 2.99804 13.2494 3.20801 13.2494ZM10.9347 2.49063L13.1751 4.73105L12.0509 5.85522L9.81051 3.6148L10.9347 2.49063ZM3.99967 9.42563L8.69426 4.73105L10.9347 6.97147L6.24009 11.666H3.99967V9.42563ZM15.8747 14.8327H1.62467C1.41471 14.8327 1.21335 14.9161 1.06488 15.0646C0.916415 15.2131 0.833008 15.4144 0.833008 15.6244C0.833008 15.8343 0.916415 16.0357 1.06488 16.1842C1.21335 16.3326 1.41471 16.416 1.62467 16.416H15.8747C16.0846 16.416 16.286 16.3326 16.4345 16.1842C16.5829 16.0357 16.6663 15.8343 16.6663 15.6244C16.6663 15.4144 16.5829 15.2131 16.4345 15.0646C16.286 14.9161 16.0846 14.8327 15.8747 14.8327Z"
+                            fill="#007800"></path>
+                        </svg>
+                        Edit</span>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+              <div class="w-100" style="border-bottom: 3px solid #FF7081; opacity: 0.1;"></div>
+
+              <div class="d-flex p-lg-3 py-3 flex-lg-nowrap flex-wrap justify-content-between">
+                <div class="p-lg-2 col-lg-3 col-8 d-flex  flex-column gap-4">
+                  <span class="fw-bold fs16">Order</span>
+                  <span class="fs14 text-clr">Vivamus sagittis lacus...</span>
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">Type</span>
+                  <span class="fs12">E-Book</span>
+
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">QTY</span>
+                  <span class="fs12 text-lg-start text-end">02</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16"> Billing Type</span>
+                  <span class="fs12">one off</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4 text-end">
+                  <span class="fw-bold fs16 w-100 text-end">Total</span>
+                  <span class="fs16 fw-bold d-flex flex-column gap-2">£125.00
+
+
+                    <span class="d-flex gap-3">
+                      <span class="d-flex gap-2 text-danger fs16"><svg width="15" height="17" viewBox="0 0 15 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.4583 3.49935H10.2917V2.66602C10.2917 2.00297 10.0414 1.36709 9.59605 0.898249C9.15065 0.429408 8.54656 0.166016 7.91667 0.166016H6.33333C5.70344 0.166016 5.09935 0.429408 4.65395 0.898249C4.20856 1.36709 3.95833 2.00297 3.95833 2.66602V3.49935H0.791667C0.581704 3.49935 0.38034 3.58715 0.231874 3.74343C0.0834075 3.89971 0 4.11167 0 4.33268C0 4.5537 0.0834075 4.76566 0.231874 4.92194C0.38034 5.07822 0.581704 5.16602 0.791667 5.16602H1.58333V14.3327C1.58333 14.9957 1.83356 15.6316 2.27895 16.1004C2.72435 16.5693 3.32844 16.8327 3.95833 16.8327H10.2917C10.9216 16.8327 11.5256 16.5693 11.971 16.1004C12.4164 15.6316 12.6667 14.9957 12.6667 14.3327V5.16602H13.4583C13.6683 5.16602 13.8697 5.07822 14.0181 4.92194C14.1666 4.76566 14.25 4.5537 14.25 4.33268C14.25 4.11167 14.1666 3.89971 14.0181 3.74343C13.8697 3.58715 13.6683 3.49935 13.4583 3.49935ZM5.54167 2.66602C5.54167 2.445 5.62507 2.23304 5.77354 2.07676C5.92201 1.92048 6.12337 1.83268 6.33333 1.83268H7.91667C8.12663 1.83268 8.32799 1.92048 8.47646 2.07676C8.62493 2.23304 8.70833 2.445 8.70833 2.66602V3.49935H5.54167V2.66602ZM11.0833 14.3327C11.0833 14.5537 10.9999 14.7657 10.8515 14.9219C10.703 15.0782 10.5016 15.166 10.2917 15.166H3.95833C3.74837 15.166 3.54701 15.0782 3.39854 14.9219C3.25007 14.7657 3.16667 14.5537 3.16667 14.3327V5.16602H11.0833V14.3327Z"
+                            fill="#C81414"></path>
+                        </svg>
+                        Remove</span>
+                      <span class="d-flex gap-2 text-success fs16"> <svg width="17" height="17" viewBox="0 0 17 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.20801 13.2494H6.56467C6.66886 13.25 6.77215 13.23 6.8686 13.1906C6.96505 13.1512 7.05278 13.0932 7.12676 13.0198L12.6051 7.53355L14.8534 5.33272C14.9276 5.25912 14.9865 5.17156 15.0267 5.07509C15.0669 4.97862 15.0876 4.87514 15.0876 4.77063C15.0876 4.66612 15.0669 4.56265 15.0267 4.46618C14.9865 4.3697 14.9276 4.28214 14.8534 4.20855L11.4968 0.812299C11.4232 0.738097 11.3356 0.679202 11.2391 0.63901C11.1427 0.598818 11.0392 0.578125 10.9347 0.578125C10.8302 0.578125 10.7267 0.598818 10.6302 0.63901C10.5337 0.679202 10.4462 0.738097 10.3726 0.812299L8.14009 3.05272L2.64592 8.53897C2.57255 8.61294 2.5145 8.70067 2.47511 8.79712C2.43571 8.89358 2.41574 8.99686 2.41634 9.10105V12.4577C2.41634 12.6677 2.49975 12.869 2.64822 13.0175C2.79668 13.166 2.99804 13.2494 3.20801 13.2494ZM10.9347 2.49063L13.1751 4.73105L12.0509 5.85522L9.81051 3.6148L10.9347 2.49063ZM3.99967 9.42563L8.69426 4.73105L10.9347 6.97147L6.24009 11.666H3.99967V9.42563ZM15.8747 14.8327H1.62467C1.41471 14.8327 1.21335 14.9161 1.06488 15.0646C0.916415 15.2131 0.833008 15.4144 0.833008 15.6244C0.833008 15.8343 0.916415 16.0357 1.06488 16.1842C1.21335 16.3326 1.41471 16.416 1.62467 16.416H15.8747C16.0846 16.416 16.286 16.3326 16.4345 16.1842C16.5829 16.0357 16.6663 15.8343 16.6663 15.6244C16.6663 15.4144 16.5829 15.2131 16.4345 15.0646C16.286 14.9161 16.0846 14.8327 15.8747 14.8327Z"
+                            fill="#007800"></path>
+                        </svg>
+                        Edit</span>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+              <div class="w-100" style="border-bottom: 3px solid #FF7081; opacity: 0.1;"></div>
+
+              <div class="d-flex p-lg-3 py-3 flex-lg-nowrap flex-wrap justify-content-between">
+                <div class="p-lg-2 col-lg-3 col-8 d-flex  flex-column gap-4">
+                  <span class="fw-bold fs16">Order</span>
+                  <span class="fs14 text-clr">Vivamus sagittis lacus...</span>
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">Type</span>
+                  <span class="fs12">E-Book</span>
+
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">QTY</span>
+                  <span class="fs12 text-lg-start text-end">02</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16"> Billing Type</span>
+                  <span class="fs12">one off</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4 text-end">
+                  <span class="fw-bold fs16 w-100 text-end">Total</span>
+                  <span class="fs16 fw-bold d-flex flex-column gap-2">£125.00
+
+
+                    <span class="d-flex gap-3">
+                      <span class="d-flex gap-2 text-danger fs16"><svg width="15" height="17" viewBox="0 0 15 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.4583 3.49935H10.2917V2.66602C10.2917 2.00297 10.0414 1.36709 9.59605 0.898249C9.15065 0.429408 8.54656 0.166016 7.91667 0.166016H6.33333C5.70344 0.166016 5.09935 0.429408 4.65395 0.898249C4.20856 1.36709 3.95833 2.00297 3.95833 2.66602V3.49935H0.791667C0.581704 3.49935 0.38034 3.58715 0.231874 3.74343C0.0834075 3.89971 0 4.11167 0 4.33268C0 4.5537 0.0834075 4.76566 0.231874 4.92194C0.38034 5.07822 0.581704 5.16602 0.791667 5.16602H1.58333V14.3327C1.58333 14.9957 1.83356 15.6316 2.27895 16.1004C2.72435 16.5693 3.32844 16.8327 3.95833 16.8327H10.2917C10.9216 16.8327 11.5256 16.5693 11.971 16.1004C12.4164 15.6316 12.6667 14.9957 12.6667 14.3327V5.16602H13.4583C13.6683 5.16602 13.8697 5.07822 14.0181 4.92194C14.1666 4.76566 14.25 4.5537 14.25 4.33268C14.25 4.11167 14.1666 3.89971 14.0181 3.74343C13.8697 3.58715 13.6683 3.49935 13.4583 3.49935ZM5.54167 2.66602C5.54167 2.445 5.62507 2.23304 5.77354 2.07676C5.92201 1.92048 6.12337 1.83268 6.33333 1.83268H7.91667C8.12663 1.83268 8.32799 1.92048 8.47646 2.07676C8.62493 2.23304 8.70833 2.445 8.70833 2.66602V3.49935H5.54167V2.66602ZM11.0833 14.3327C11.0833 14.5537 10.9999 14.7657 10.8515 14.9219C10.703 15.0782 10.5016 15.166 10.2917 15.166H3.95833C3.74837 15.166 3.54701 15.0782 3.39854 14.9219C3.25007 14.7657 3.16667 14.5537 3.16667 14.3327V5.16602H11.0833V14.3327Z"
+                            fill="#C81414"></path>
+                        </svg>
+                        Remove</span>
+                      <span class="d-flex gap-2 text-success fs16"> <svg width="17" height="17" viewBox="0 0 17 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.20801 13.2494H6.56467C6.66886 13.25 6.77215 13.23 6.8686 13.1906C6.96505 13.1512 7.05278 13.0932 7.12676 13.0198L12.6051 7.53355L14.8534 5.33272C14.9276 5.25912 14.9865 5.17156 15.0267 5.07509C15.0669 4.97862 15.0876 4.87514 15.0876 4.77063C15.0876 4.66612 15.0669 4.56265 15.0267 4.46618C14.9865 4.3697 14.9276 4.28214 14.8534 4.20855L11.4968 0.812299C11.4232 0.738097 11.3356 0.679202 11.2391 0.63901C11.1427 0.598818 11.0392 0.578125 10.9347 0.578125C10.8302 0.578125 10.7267 0.598818 10.6302 0.63901C10.5337 0.679202 10.4462 0.738097 10.3726 0.812299L8.14009 3.05272L2.64592 8.53897C2.57255 8.61294 2.5145 8.70067 2.47511 8.79712C2.43571 8.89358 2.41574 8.99686 2.41634 9.10105V12.4577C2.41634 12.6677 2.49975 12.869 2.64822 13.0175C2.79668 13.166 2.99804 13.2494 3.20801 13.2494ZM10.9347 2.49063L13.1751 4.73105L12.0509 5.85522L9.81051 3.6148L10.9347 2.49063ZM3.99967 9.42563L8.69426 4.73105L10.9347 6.97147L6.24009 11.666H3.99967V9.42563ZM15.8747 14.8327H1.62467C1.41471 14.8327 1.21335 14.9161 1.06488 15.0646C0.916415 15.2131 0.833008 15.4144 0.833008 15.6244C0.833008 15.8343 0.916415 16.0357 1.06488 16.1842C1.21335 16.3326 1.41471 16.416 1.62467 16.416H15.8747C16.0846 16.416 16.286 16.3326 16.4345 16.1842C16.5829 16.0357 16.6663 15.8343 16.6663 15.6244C16.6663 15.4144 16.5829 15.2131 16.4345 15.0646C16.286 14.9161 16.0846 14.8327 15.8747 14.8327Z"
+                            fill="#007800"></path>
+                        </svg>
+                        Edit</span>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+              <div class="w-100" style="border-bottom: 3px solid #FF7081; opacity: 0.1;"></div>
+
+              <div class="d-flex p-lg-3 py-3 flex-lg-nowrap flex-wrap justify-content-between">
+                <div class="p-lg-2 col-lg-3 col-8 d-flex  flex-column gap-4">
+                  <span class="fw-bold fs16">Order</span>
+                  <span class="fs14 text-clr">Vivamus sagittis lacus...</span>
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">Type</span>
+                  <span class="fs12">E-Book</span>
+
+                </div>
+                <div class="p-2 col-2 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16">QTY</span>
+                  <span class="fs12 text-lg-start text-end">02</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4">
+                  <span class="fw-bold fs16"> Billing Type</span>
+                  <span class="fs12">one off</span>
+
+                </div>
+                <div class="p-2 col-lg-3 col-6 d-flex flex-column gap-4 text-end">
+                  <span class="fw-bold fs16 w-100 text-end">Total</span>
+                  <span class="fs16 fw-bold d-flex flex-column gap-2">£125.00
+
+
+                    <span class="d-flex gap-3">
+                      <span class="d-flex gap-2 text-danger fs16"><svg width="15" height="17" viewBox="0 0 15 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M13.4583 3.49935H10.2917V2.66602C10.2917 2.00297 10.0414 1.36709 9.59605 0.898249C9.15065 0.429408 8.54656 0.166016 7.91667 0.166016H6.33333C5.70344 0.166016 5.09935 0.429408 4.65395 0.898249C4.20856 1.36709 3.95833 2.00297 3.95833 2.66602V3.49935H0.791667C0.581704 3.49935 0.38034 3.58715 0.231874 3.74343C0.0834075 3.89971 0 4.11167 0 4.33268C0 4.5537 0.0834075 4.76566 0.231874 4.92194C0.38034 5.07822 0.581704 5.16602 0.791667 5.16602H1.58333V14.3327C1.58333 14.9957 1.83356 15.6316 2.27895 16.1004C2.72435 16.5693 3.32844 16.8327 3.95833 16.8327H10.2917C10.9216 16.8327 11.5256 16.5693 11.971 16.1004C12.4164 15.6316 12.6667 14.9957 12.6667 14.3327V5.16602H13.4583C13.6683 5.16602 13.8697 5.07822 14.0181 4.92194C14.1666 4.76566 14.25 4.5537 14.25 4.33268C14.25 4.11167 14.1666 3.89971 14.0181 3.74343C13.8697 3.58715 13.6683 3.49935 13.4583 3.49935ZM5.54167 2.66602C5.54167 2.445 5.62507 2.23304 5.77354 2.07676C5.92201 1.92048 6.12337 1.83268 6.33333 1.83268H7.91667C8.12663 1.83268 8.32799 1.92048 8.47646 2.07676C8.62493 2.23304 8.70833 2.445 8.70833 2.66602V3.49935H5.54167V2.66602ZM11.0833 14.3327C11.0833 14.5537 10.9999 14.7657 10.8515 14.9219C10.703 15.0782 10.5016 15.166 10.2917 15.166H3.95833C3.74837 15.166 3.54701 15.0782 3.39854 14.9219C3.25007 14.7657 3.16667 14.5537 3.16667 14.3327V5.16602H11.0833V14.3327Z"
+                            fill="#C81414"></path>
+                        </svg>
+                        Remove</span>
+                      <span class="d-flex gap-2 text-success fs16"> <svg width="17" height="17" viewBox="0 0 17 17"
+                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M3.20801 13.2494H6.56467C6.66886 13.25 6.77215 13.23 6.8686 13.1906C6.96505 13.1512 7.05278 13.0932 7.12676 13.0198L12.6051 7.53355L14.8534 5.33272C14.9276 5.25912 14.9865 5.17156 15.0267 5.07509C15.0669 4.97862 15.0876 4.87514 15.0876 4.77063C15.0876 4.66612 15.0669 4.56265 15.0267 4.46618C14.9865 4.3697 14.9276 4.28214 14.8534 4.20855L11.4968 0.812299C11.4232 0.738097 11.3356 0.679202 11.2391 0.63901C11.1427 0.598818 11.0392 0.578125 10.9347 0.578125C10.8302 0.578125 10.7267 0.598818 10.6302 0.63901C10.5337 0.679202 10.4462 0.738097 10.3726 0.812299L8.14009 3.05272L2.64592 8.53897C2.57255 8.61294 2.5145 8.70067 2.47511 8.79712C2.43571 8.89358 2.41574 8.99686 2.41634 9.10105V12.4577C2.41634 12.6677 2.49975 12.869 2.64822 13.0175C2.79668 13.166 2.99804 13.2494 3.20801 13.2494ZM10.9347 2.49063L13.1751 4.73105L12.0509 5.85522L9.81051 3.6148L10.9347 2.49063ZM3.99967 9.42563L8.69426 4.73105L10.9347 6.97147L6.24009 11.666H3.99967V9.42563ZM15.8747 14.8327H1.62467C1.41471 14.8327 1.21335 14.9161 1.06488 15.0646C0.916415 15.2131 0.833008 15.4144 0.833008 15.6244C0.833008 15.8343 0.916415 16.0357 1.06488 16.1842C1.21335 16.3326 1.41471 16.416 1.62467 16.416H15.8747C16.0846 16.416 16.286 16.3326 16.4345 16.1842C16.5829 16.0357 16.6663 15.8343 16.6663 15.6244C16.6663 15.4144 16.5829 15.2131 16.4345 15.0646C16.286 14.9161 16.0846 14.8327 15.8747 14.8327Z"
+                            fill="#007800"></path>
+                        </svg>
+                        Edit</span>
+                    </span>
+                  </span>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="b1 col-lg-4 col-sm-12 bg-white d-flex ">
+            <div class="cart_part mx-auto justify-content-start ">
+              <div class="d-flex px-4 justify-content-between w-100 px-lg-4 align-items-baseline">
+                <div class="col-lg-6 col-6 fs24 text-clr fw-bolder text-start">Subtotal</div>
+                <div class="col-lg-6 co l-6 fs24 fw-bolder text-end">£379.00</div>
+              </div>
+              <div class="w-100" style="border-bottom: 1px solid #FF7081; opacity: 0.5;"></div>
+
+              <div class="row justify-content-between w-100 px-lg-4">
+                <div class="col-lg-12 col-12 fs16  text-start ">
+
+
+                  <div class="w-100 align-items-start mb-3 d-flex gap-4">
+                    <input type="checkbox" id="cb1">
+                    <label for="cb1"></label>
+                    <label for="terms"> I agree with the <span class="text-clr">Terms and
+                        Conditions </span>and <span class="text-clr">Privacy Policy </span></label><br />
+                  </div>
+
+
+                </div>
+
+              </div>
+              <div class="w-100" style="border-bottom: 1px solid #FF7081; opacity: 0.5;"></div>
+
+              <div class="row justify-content-between w-100 gap-4">
+                <div class="col-lg-12 col-12 fs20  text-start d-flex justify-content-center">
+
+                  <input type="text" class="form-control pill w-100 fs16 px-4" placeholder="Your Coupon Code..."
+                    height="56">
+                </div>
+                <div class="col-lg-12 col-12 fs20  text-start d-flex justify-content-center"> <button
+                    class="w-100 secondary_btn secondary_btn2 bg-transparent btn p-0  fs20 fw-bold text-center primary_btn_txtclr">
+                    Apply Code
+                  </button>
+                </div>
+              </div>
+              <div class="w-100" style="border-bottom: 1px solid #FF7081; opacity: 0.5;"></div>
+
+              <div class="row justify-content-between w-100 px-lg-4">
+                <div class="col-lg-6 col-6 fs16  text-start sec_text_clr">Coupon Added
+                </div>
+                <div class="col-lg-6 col-6 fs16  text-end lh-lg sec_text_clr">10% off
+                  <br> $375.95
+                </div>
+              </div>
+              <div class="d-flex justify-content-start align-items-baseline px-4 justify-content-between w-100 px-lg-4">
+                <div class="col-lg-6 col-6 fs24 text-clr fw-bolder text-start">Total</div>
+                <div class="col-lg-6 co l-6 fs24 fw-bolder text-end">£379.00</div>
+              </div>
+              <div class="row justify-content-center w-100 px-lg-4">
+                <div class="col-lg-12 col-12 fs20  text-start d-flex justify-content-center"> <button
+                    class="w-100 primary_btn btn p-0 primary_btn_bgclr fs20 fw-bold text-center primary_btn_txtclr">
+                    Pay Now
+                  </button>
+                </div>
+                <div class="col-lg-12 col-12 fs16 mt-4 text-start d-flex justify-content-center"><img
+                    src="media/logo/Card.png" class="w-75 mx-auto" alt="">
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+      <div class="row justify-content-between h-100 align-items-center py-0 my-0">
+        <div class="data1 col-12 col-lg-4 bg-white pclr">
+          <div class="d-flex flex-column footer-logo">
+            <a href="/">
+              <img src="media/logo/logo.png" alt="">
+            </a>
+
+            <div class="data11 fs18" style="width: 65%">
+              <p>©Copyright ©2020 DEVSTUFFNOW. All Rights Reserved</p>
+            </div>
+
+            <div class="data11 fs20 d-flex align-items-center gap-2" style="">
+              <span class="material-symbols-outlined"> mail </span>
+              <a href="mailto:info@mail.com">info@mail.com</a>
+            </div>
+
+            <div class="data11 fs20 d-flex align-items-center gap-2" style="">
+              <span class="material-symbols-outlined"> phone </span>
+              <a href="tel:1234567890">1234567890</a>
+            </div>
+            <div class="visacard w-50" style="">
+              <img src="media/logo/Card.png" class="mt-3" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="data col-12 col-lg-8">
+          <div class="comdetails">
+            <h4 class="text-white fs22 fsm24 mb-4 fw-bold">Terms</h4>
+
+            <ul class="list-unstyled text-light">
+              <li class="mb-3">
+                <a href="" class="fs18">Terms &amp; Conditions</a>
+              </li>
+              <li class="mb-3"><a href="termsandcondition.html" class="fs18">Cookie Policy</a></li>
+              <li class="mb-3"><a href="termsandcondition.html" class="fs18">Privacy Policy</a></li>
+              <li class="mb-3"><a href="faq.html" class="fs18">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="Links">
+            <h4 class="text-white fs22 fsm24 mb-4 fw-bold">Links</h4>
+
+            <div class="d-flex flex-column text-light">
+              <ul class="list-unstyled gap-3">
+                <li class="mb-3"><a href="Dashbaord.html" class="fs18"> Resources</a></li>
+                <li class="mb-3"><a href="shop.html" class="fs18"> Services</a></li>
+                <li class="mb-3"><a href="why_us.html" class="fs18"> About Us</a></li>
+                <li class="mb-3"><a href="contact_us.html" class="fs18"> Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="Support">
+            <h4 class="text-white fs22 fsm24 mb-4 fw-bold">Contact Us</h4>
+            <ul class="list-unstyled text-light">
+              <li class="mb-3"><a href="" class="fs18"> ABC Limited,</a></li>
+              <li class="mb-3"><a href="" class="fs18"> 100 ABC Road,</a></li>
+              <li class="mb-3"><a href="" class="fs18"> World City,</a></li>
+              <li class="mb-3"><a href="" class="fs18"> World,</a></li>
+              <li class="mb-3"><a href="" class="fs18"> B28 8PR</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var t = false;
+      $(".navbar-toggler").click(function () {
+        if (!t) {
+          $(".navbar-toggler span").text("close");
+          t = true;
+        } else {
+          $(".navbar-toggler span").text("menu");
+          t = false;
+        }
+      });
+      $(".dropdown").click(function () {
+        $(".navnav").toggleClass("drop");
+      });
+    });
+  </script>
+  <!-- Code injected by live-server -->
+  <script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    } else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+            // ]]>
+  </script>
+
+
+</body>
+
+</html>
